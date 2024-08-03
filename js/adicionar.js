@@ -28,11 +28,6 @@ function addContato(event) {
 
 
 
-// Função para definir um item no armazenamento local
-function setLocalStorage(chave, valorObjeto) {
-    // Converte o objeto para uma string JSON e o armazena com a chave especificada
-    localStorage.setItem(chave, JSON.stringify(valorObjeto));
-}
 
 // Função para obter o valor de um elemento HTML pelo seu ID
 function getValueById(id) {
