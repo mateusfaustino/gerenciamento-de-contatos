@@ -8,37 +8,13 @@
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="listarContatos()">
     <h1>Lista de contatos</h1>
-    <ul class="lista-contatos">
-        <li class="lista-contatos__item">
-            <span class="lista-contatos__item__nome">Pedro</span>
-            <span class="lista-contatos__item__numero">55 (85)988888888</span>
-            <span class="lista-contatos__item__email">pedro@gmail.com</span>
-            <div class="lista-contatos__item__action">
-                <button type="button">editar</button>
-                <button type="button">excluir</button>
-            </div>
-        </li>
-        <li class="lista-contatos__item">
-            <span class="lista-contatos__item__nome">Pedro</span>
-            <span class="lista-contatos__item__numero">55 (85)988888888</span>
-            <span class="lista-contatos__item__email">pedro@gmail.com</span>
-            <div class="lista-contatos__item__action">
-                <button type="button">editar</button>
-                <button type="button">excluir</button>
-            </div>
-        </li>
-        <li class="lista-contatos__item">
-            <span class="lista-contatos__item__nome">Pedro</span>
-            <span class="lista-contatos__item__numero">55 (85)988888888</span>
-            <span class="lista-contatos__item__email">pedro@gmail.com</span>
-            <div class="lista-contatos__item__action">
-                <button type="button">editar</button>
-                <button type="button">excluir</button>
-            </div>
-        </li>
+    <ul class="lista-contatos" id="lista-contatos">
 
     </ul>
+    <a href="./adicionar.html" class="add-contato">Adicionar</a>
+    <script src="/js/geral.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
