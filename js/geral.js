@@ -19,28 +19,24 @@ function setLocalStorage(chave, valorObjeto) {
     localStorage.setItem(chave, JSON.stringify(valorObjeto));
 }
 
-function getCounter(){
-    const CONTADOR = 'contador'
-     
 
-    // Recupera o item do armazenamento local com a chave especificada
-    let contador= localStorage.getItem(CONTADOR);
 
-    // Se o item não existir, inicializa-o como um array vazio e o salva no armazenamento local
-    if (!contador) {
-        localStorage.setItem(CONTADOR, JSON.stringify(0))
-        contador = localStorage.getItem(CONTADOR);
+function initializeIdGenerator() {
+    if (!localStorage.getItem('currentId')) {
+      localStorage.setItem('currentId', '0');
     }
-
-
-    return Number(contador)
-
-}
-
-function incrementCounter() {
-    let contador = getCounter()
-    console.log(contador+1)
-    let contadorPlusOne = contador+1
-    console.log(contadorPlusOne)
-    setLocalStorage('contador',JSON.stringify(contadorPlusOne))
-}
+  }
+  
+  function generateId() {
+    initializeIdGenerator();
+    
+    let currentId = parseInt(localStorage.getItem('currentId'), 10);
+    
+    currentId += 1;
+    
+    localStorage.setItem('currentId', currentId.toString());
+    
+    return currentId;
+  }
+  
+  
