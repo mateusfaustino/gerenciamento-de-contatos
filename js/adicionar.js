@@ -12,12 +12,14 @@ function addContato(event) {
     let valorNumero = getValueById("numero");
     let valorEmail = getValueById("email");
 
-    // Adiciona um novo contato ao array de contatos
-    contatosObjeto.push({
+    let novoContato = {
+        id:generateId(),
         name: valorNome,
         number: valorNumero,
         email: valorEmail
-    });
+    }
+    // Adiciona um novo contato ao array de contatos
+    contatosObjeto.push(novoContato);
 
     // Salva o array atualizado de contatos no armazenamento local
     setLocalStorage(CONTATOS, contatosObjeto);
