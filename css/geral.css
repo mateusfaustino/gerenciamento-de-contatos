@@ -13,7 +13,7 @@ body{
     flex-direction: column;
 }
 
-button, .add-contato, .voltar{
+button, .add-contato, .voltar, a.btn{
     padding: 8px;
     border-radius: 5px;
     background-color: cadetblue;

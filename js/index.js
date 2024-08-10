@@ -13,7 +13,7 @@ function listarContatos() {
             <span class="lista-contatos__item__numero">${contato.number}</span>
             <span class="lista-contatos__item__email">${contato.email}</span>
             <div class="lista-contatos__item__action">
-                <button type="button">editar</button>
+                <a type="button" class="btn" href="/editar.html?contato=${contato.id}"">editar</a>
                 <button type="button" class="delete-btn" onclick="deleteContact(${contato.id})">excluir</button>
             </div>
         </li>`

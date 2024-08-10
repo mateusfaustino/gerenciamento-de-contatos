@@ -58,3 +58,4 @@ function initializeIdGenerator() {
     setLocalStorage(CONTATOS, novaLista)
     location.reload()
   }
+
