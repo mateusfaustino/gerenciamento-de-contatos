@@ -39,4 +39,22 @@ function initializeIdGenerator() {
     return currentId;
   }
   
-  
+  function deleteContact(id) {
+    const CONTATOS = "contatos"; // Define a chave do armazenamento local para os contatos
+    let confirmacao = confirm("Você tem certeza que quer excluir este contato?")
+    console.log(confirmacao);
+
+    if(!confirmacao){
+        return
+    }
+
+    // Recupera a lista de contatos armazenada localmente e a converte de JSON para objeto JavaScript
+    let contatos = getLocalStorage(CONTATOS);
+    let contatosObjeto = JSON.parse(contatos);
+    let novaLista = contatosObjeto.filter((contato)=>{
+        return(contato.id!=id)
+    })
+
+    setLocalStorage(CONTATOS, novaLista)
+    location.reload()
+  }

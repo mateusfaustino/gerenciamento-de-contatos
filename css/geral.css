@@ -48,3 +48,7 @@ input{
     border-radius: 5px;
     padding: 6px;
 }
+
+.delete-btn{
+    background-color: orangered;
+}
